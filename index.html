@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+
+    
+    
+
+    <script src="jquery-1.12.4.js"></script>
+    <script src="jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".accordion .title").click(function(){
+                if($(this).next("div").is(":visible")){
+                    $(this).next("div").slideUp("slow");
+                }else{
+                    $(".accordion .content").slideUp("slow");
+                    $(this).next("div").slideToggle("slow");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="text">
+        <div id="page-header">Sound of the road</div>
+        <div class="accordion">
+            <div class="title">Maserati</div>
+            <div class="content">
+                <figure>
+                    <img src="images/Maserati.jpg" alt="Car" width="100%" height="250">
+                    <figcaption>“There is more to life than simply increasing its speed.”
+                        <br><small>Mahatma Gandhi</small></figcaption>
+                </figure>
+            </div>
+            <div class="title">Peugeot</div>
+            <div class="content">
+                <figure>
+                    <img src="images/Peugeot.jpeg" alt="Car" width="100%" height="250">
+                    <figcaption>“If one day the speed kills me, do not cry because I was smiling.”
+                        <br><small> Paul Walker</small></figcaption>
+                </figure>
+            </div>
+            <div class="title">Jaguar</div>
+            <div class="content">
+                <figure>
+                    <img src="images/Jaguar.jpg" alt="Car" width="100%" height="250">
+                    <figcaption>“The ultimate concept car will move so fast, even at rest, as to be invisible.”
+                        <br><small>  J.G. Ballard</small></figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
